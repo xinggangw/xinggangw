@@ -1,8 +1,6 @@
 # WSI Labs
 
-World Superintelligence Labs builds world models toward embodied general superintelligence — AI systems that understand physical causality, reason across continuous time and space, and plan reliable actions in the real world.
-
-**Website**: https://xinggangw.github.io/
+I am building WSI Labs alongside a group of talented students. Together, we work toward embodied general superintelligence — AI systems that understand physical causality, reason across continuous time and space, and plan reliable actions in the real world.
 
 ---
 
