@@ -11,10 +11,6 @@ I am building WSI Labs alongside a group of talented students. Together, we work
 - **Embodied robotics** — perception, memory, and action for real environments
 - **High-dimensional planning** — reasoning under constraints with safety guardrails
 
-## Research Blog
-
-Research notes and technical essays at [/blog](https://xinggangw.github.io/blog/).
-
 ---
 
 *Build world model with superintelligence step by step.*
