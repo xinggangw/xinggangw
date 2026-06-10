@@ -10,62 +10,76 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="./" aria-label="WSI Labs home">
-        <img class="brand-mark" src="assets/wsi-mark.svg" alt="" width="56" height="56">
-        <span class="brand-copy">
-          <span class="brand-name">WSI Labs</span>
-          <span class="brand-subtitle">World Superintelligence</span>
-        </span>
-      </a>
+      <div class="site-shell">
+        <a class="brand" href="./" aria-label="WSI Labs home">
+          <img class="brand-mark" src="assets/wsi-mark.svg" alt="" width="46" height="46">
+          <span class="brand-copy">
+            <span class="brand-name">WSI Labs</span>
+            <span class="brand-subtitle">World Superintelligence</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#vision">vision</a>
+          <a href="#research">research</a>
+          <a href="#blog">blog</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">World Superintelligence.</h1>
-        <p class="slogan">build world model with superintelligence step by step</p>
-      </section>
-
-      <section class="quick-info" aria-label="Lab information">
-        <div>
-          <p class="info-label">Contact</p>
-          <p class="info-value"><a href="mailto:contact@wsilabs.xyz">contact@wsilabs.xyz</a></p>
-        </div>
-        <div>
-          <p class="info-label">Blog</p>
-          <p class="info-value"><a href="blog/">wsi labs updates</a></p>
-        </div>
-        <div>
-          <p class="info-label">Focus</p>
-          <p class="info-value">world models · physical AI · embodied planning</p>
+      <section class="site-shell hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">World Superintelligence.</h1>
+          <p class="slogan">build world model with superintelligence step by step</p>
         </div>
       </section>
 
-      <section class="manifesto" id="vision" aria-labelledby="manifesto-title">
+      <section class="site-shell" aria-label="Lab information">
+        <div class="quick-info">
+          <div>
+            <p class="info-label">Contact</p>
+            <p class="info-value"><a href="mailto:contact@wsilabs.xyz">contact@wsilabs.xyz</a></p>
+          </div>
+          <div>
+            <p class="info-label">Blog</p>
+            <p class="info-value"><a href="blog/">wsi labs updates</a></p>
+          </div>
+          <div>
+            <p class="info-label">Focus</p>
+            <p class="info-value">world models · physical AI · embodied planning</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-shell manifesto" id="vision" aria-labelledby="manifesto-title">
         <h2 id="manifesto-title">WSI Labs</h2>
         <p>
           We are building toward World Superintelligence: AI systems that understand physical causality, reason across continuous time and space, and plan reliable actions in the real world.
         </p>
       </section>
 
-      <section class="copy" aria-label="Vision statement">
-        <p class="lead">
-          Large language models changed how machines work with text. They still live mostly inside symbolic space.
-        </p>
-        <p>
-          Roads, factories, homes, weather, bodies, machines, and robots do not arrive as clean tokens. They arrive as continuous, noisy, multimodal streams where small actions change what can happen next.
-        </p>
-        <p>
-          WSI Labs builds world models for that setting. Our systems learn representations of the physical world that preserve causality, geometry, dynamics, memory, and long-horizon intent while leaving behind details that do not matter for action.
-        </p>
-        <p>
-          Our research path joins frontier architecture work with hard deployment problems: intelligent driving without high-definition map dependence, embodied robots that adapt to unfamiliar spaces, and planning systems that connect perception, memory, and control.
-        </p>
-        <p>
-          World Superintelligence is not a single launch. It is a disciplined sequence of measurable steps: better representation, stronger prediction, safer planning, more capable embodiments, and open scientific exchange.
-        </p>
+      <section class="site-shell copy" aria-label="Vision statement">
+        <div class="copy-text">
+          <p class="lead">
+            Large language models changed how machines work with text. They still live mostly inside symbolic space.
+          </p>
+          <p>
+            Roads, factories, homes, weather, bodies, machines, and robots do not arrive as clean tokens. They arrive as continuous, noisy, multimodal streams where small actions change what can happen next.
+          </p>
+          <p>
+            WSI Labs builds world models for that setting. Our systems learn representations of the physical world that preserve causality, geometry, dynamics, memory, and long-horizon intent while leaving behind details that do not matter for action.
+          </p>
+          <p>
+            Our research path joins frontier architecture work with hard deployment problems: intelligent driving without high-definition map dependence, embodied robots that adapt to unfamiliar spaces, and planning systems that connect perception, memory, and control.
+          </p>
+          <p>
+            World Superintelligence is not a single launch. It is a disciplined sequence of measurable steps: better representation, stronger prediction, safer planning, more capable embodiments, and open scientific exchange.
+          </p>
+        </div>
       </section>
 
-      <section class="section" id="research" aria-labelledby="research-title">
+      <section class="site-shell section" id="research" aria-labelledby="research-title">
         <div class="section-header">
           <h2 id="research-title">Research</h2>
           <p class="section-intro">
@@ -74,38 +88,40 @@
         </div>
       </section>
 
-      <div class="research-list">
-        <article class="research-item">
-          <div class="research-kicker">01 / representation</div>
-          <div>
-            <h3>Physical world models</h3>
-            <p>Learning compact latent states that keep the causal and geometric structure needed for prediction, planning, and control.</p>
-          </div>
-        </article>
-        <article class="research-item">
-          <div class="research-kicker">02 / autonomy</div>
-          <div>
-            <h3>Map-free intelligent driving</h3>
-            <p>Building driving intelligence that understands scenes, intent, uncertainty, and local physics without depending on brittle high-definition maps.</p>
-          </div>
-        </article>
-        <article class="research-item">
-          <div class="research-kicker">03 / embodiment</div>
-          <div>
-            <h3>Robots that reason in motion</h3>
-            <p>Connecting perception, memory, and action so robots can recover from change, choose useful experiments, and work in real environments.</p>
-          </div>
-        </article>
-        <article class="research-item">
-          <div class="research-kicker">04 / cognition</div>
-          <div>
-            <h3>High-dimensional planning</h3>
-            <p>Developing reasoning systems that can keep many constraints in view, simulate consequences, and select safe action sequences.</p>
-          </div>
-        </article>
+      <div class="site-shell">
+        <div class="research-list">
+          <article class="research-item">
+            <div class="research-kicker">01 / representation</div>
+            <div>
+              <h3>Physical world models</h3>
+              <p>Learning compact latent states that keep the causal and geometric structure needed for prediction, planning, and control.</p>
+            </div>
+          </article>
+          <article class="research-item">
+            <div class="research-kicker">02 / autonomy</div>
+            <div>
+              <h3>Map-free intelligent driving</h3>
+              <p>Building driving intelligence that understands scenes, intent, uncertainty, and local physics without depending on brittle high-definition maps.</p>
+            </div>
+          </article>
+          <article class="research-item">
+            <div class="research-kicker">03 / embodiment</div>
+            <div>
+              <h3>Robots that reason in motion</h3>
+              <p>Connecting perception, memory, and action so robots can recover from change, choose useful experiments, and work in real environments.</p>
+            </div>
+          </article>
+          <article class="research-item">
+            <div class="research-kicker">04 / cognition</div>
+            <div>
+              <h3>High-dimensional planning</h3>
+              <p>Developing reasoning systems that can keep many constraints in view, simulate consequences, and select safe action sequences.</p>
+            </div>
+          </article>
+        </div>
       </div>
 
-      <section class="section" id="blog" aria-labelledby="blog-title">
+      <section class="site-shell section" id="blog" aria-labelledby="blog-title">
         <div class="section-header">
           <h2 id="blog-title">Research Blog</h2>
           <p class="section-intro">
@@ -114,33 +130,37 @@
         </div>
       </section>
 
-      <div class="post-list">
-        <a class="post-link" href="blog/drivelaw-latent-driving-world.html">
-          <span class="post-meta">CVPR 2026 · 2026.06</span>
-          <div>
-            <h3>DriveLaW: Planning from a Latent Driving World</h3>
-            <p>A short note on our CVPR 2026 paper, where video generation and trajectory planning are connected through shared driving latents.</p>
-          </div>
-          <span class="post-arrow" aria-hidden="true">→</span>
-        </a>
+      <div class="site-shell">
+        <div class="post-list">
+          <a class="post-link" href="blog/drivelaw-latent-driving-world.html">
+            <span class="post-meta">CVPR 2026 · 2026.06</span>
+            <div>
+              <h3>DriveLaW: Planning from a Latent Driving World</h3>
+              <p>A short note on our CVPR 2026 paper, where video generation and trajectory planning are connected through shared driving latents.</p>
+            </div>
+            <span class="post-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
 
-      <section class="closing" id="contact">
-        <p>
-          If you are building physical AI systems, robotics platforms, autonomous driving stacks, or new model architectures, we would like to talk.
-        </p>
-        <p class="link-row">
-          <a href="mailto:contact@wsilabs.xyz">Contact</a>
-          <span>|</span>
-          <a href="blog/">Blog</a>
-          <span>|</span>
-          <a href="#research">Research</a>
-        </p>
+      <section class="site-shell closing" id="contact">
+        <div>
+          <p>
+            If you are building physical AI systems, robotics platforms, autonomous driving stacks, or new model architectures, we would like to talk.
+          </p>
+          <p class="link-row">
+            <a href="mailto:contact@wsilabs.xyz">Contact</a>
+            <span>|</span>
+            <a href="blog/">Blog</a>
+            <span>|</span>
+            <a href="#research">Research</a>
+          </p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      World Superintelligence Labs © 2026
+      <div class="site-shell">World Superintelligence Labs © 2026</div>
     </footer>
   </body>
 </html>
