@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 196" role="img" aria-labelledby="title desc">
+  <title id="title">WSI Labs 03D logo lockup</title>
+  <desc id="desc">The 03D WSI Labs logo mark paired with the WSI Labs wordmark.</desc>
+  <rect x="0" y="0" width="184" height="196" fill="#ffffff" stroke="#050505" stroke-width="11"/>
+  <path d="M24 114l33 54 35-54 35 54 33-54" fill="none" stroke="#050505" stroke-width="17" stroke-linecap="square" stroke-linejoin="miter"/>
+  <rect x="86" y="26" width="14" height="142" fill="#0077ff"/>
+  <path d="M135 42C111 30 75 30 64 54c-15 34 85 31 69 68-11 25-51 27-82 9" fill="none" stroke="#050505" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="224" y="86" fill="#050505" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">WSI Labs</text>
+  <text x="224" y="116" fill="#707070" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">World Superintelligence</text>
+</svg>
