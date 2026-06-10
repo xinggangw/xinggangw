@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A WSI Labs research note on world models and embodied planning.">
+    <title>The Embodied Planning Loop | WSI Labs</title>
+    <link rel="icon" href="../assets/wsi-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="WSI Labs home">
+        <img class="brand-mark" src="../assets/wsi-mark.svg" alt="" width="64" height="64">
+        <span class="brand-text">World Superintelligence Labs</span>
+      </a>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <h1 class="page-title">The Embodied Planning Loop.</h1>
+        <p class="slogan">research note / 2026.06</p>
+      </section>
+
+      <div class="post-note">
+        <a class="back-link" href="./">← Back to research blog</a>
+      </div>
+
+      <article class="post-body">
+        <p>
+          A world model becomes useful when its predictions change what an agent does. For embodied systems, intelligence lives in a loop: observe the world, update memory, predict consequences, check constraints, act, and observe again.
+        </p>
+        <p>
+          This loop is unforgiving. A robot cannot rely on a fluent explanation after the fact. It must choose actions while the scene changes, while sensors are noisy, and while the cost of a bad plan is physical.
+        </p>
+
+        <h2>Prediction is only one part</h2>
+        <p>
+          The model should predict in a representation space that is useful for action. It should expose which parts of the future are stable, which parts are uncertain, and which actions would create new information.
+        </p>
+        <p>
+          Planning then becomes a search through possible futures under constraints. The goal is not to imagine every pixel. The goal is to keep the causal structure needed to choose the next safe and useful step.
+        </p>
+
+        <h2>Step by step</h2>
+        <p>
+          World Superintelligence will likely emerge through increasingly capable embodied loops. Each loop must be measurable: better memory, better transfer, better recovery from surprise, and clearer safety boundaries.
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      World Superintelligence Labs © 2026
+    </footer>
+  </body>
+</html>

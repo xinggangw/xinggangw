@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A WSI Labs research note on world models for map-free intelligent driving.">
+    <title>World Models Without High-Definition Maps | WSI Labs</title>
+    <link rel="icon" href="../assets/wsi-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="WSI Labs home">
+        <img class="brand-mark" src="../assets/wsi-mark.svg" alt="" width="64" height="64">
+        <span class="brand-text">World Superintelligence Labs</span>
+      </a>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <h1 class="page-title">World Models Without High-Definition Maps.</h1>
+        <p class="slogan">research note / 2026.06</p>
+      </section>
+
+      <div class="post-note">
+        <a class="back-link" href="./">← Back to research blog</a>
+      </div>
+
+      <article class="post-body">
+        <p>
+          High-definition maps are useful when the world behaves like yesterday. They become less useful when road work appears overnight, lane markings fade, temporary signs move, or a human driver creates a situation the map never described.
+        </p>
+        <p>
+          A world model for driving should treat the map as one possible memory source, not as the center of intelligence. The live scene must remain primary: geometry, motion, intent, visibility, surface condition, and the causal effect of the vehicle's own actions.
+        </p>
+
+        <h2>What the model needs to know</h2>
+        <p>
+          The model needs to maintain a compact state that predicts what matters next. It should know which objects can move, which free space is likely to remain free, which signals are reliable, and how uncertainty should change the planned maneuver.
+        </p>
+        <p>
+          This is different from memorizing routes. The system must learn local physical regularities and use them under pressure, especially when the map is incomplete or contradicted by the sensor stream.
+        </p>
+
+        <h2>Why this matters</h2>
+        <p>
+          Map-free intelligence is not only a deployment convenience. It is a useful test for whether a model understands the world as an active system. If the model can adapt in a new district, a temporary construction zone, or an unmapped road, it has learned more than a static prior.
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      World Superintelligence Labs © 2026
+    </footer>
+  </body>
+</html>

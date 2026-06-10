@@ -1,0 +1,478 @@
+:root {
+  --paper: #ffffff;
+  --ink: #111111;
+  --muted: #777777;
+  --line: #dddddd;
+  --max: 960px;
+  --serif: "Times New Roman", Times, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+::selection {
+  background: #e8e8e8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 48px 32px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-mark {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+}
+
+.brand-text {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* Hero */
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 64px 32px 48px;
+}
+
+.hero h1,
+.page-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.1;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+.slogan {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Quick info */
+.quick-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px 56px;
+}
+
+.info-label {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.info-value {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.info-value a:hover {
+  color: var(--ink);
+}
+
+/* Manifesto box */
+.manifesto {
+  max-width: var(--max);
+  margin: 0 auto 64px;
+  padding: 40px 48px 44px;
+  border: 1px solid var(--line);
+}
+
+.manifesto h2 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.manifesto p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Copy / body text */
+.copy,
+.section,
+.closing,
+.post-body {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.copy p,
+.post-body p {
+  margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.copy .lead {
+  font-size: 20px;
+}
+
+/* Section headers */
+.section {
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+
+.section h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+.section-intro {
+  margin: 0;
+  color: #444;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Research list */
+.research-list {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px 24px;
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.research-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.research-kicker {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.research-item h3 {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.research-item p {
+  margin: 0;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Blog post list */
+.post-list {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px 48px;
+}
+
+.post-link {
+  display: grid;
+  grid-template-columns: 160px 1fr 32px;
+  gap: 32px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.post-link:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.post-link:hover {
+  text-decoration: none;
+}
+
+.post-link:hover h3 {
+  text-decoration: underline;
+}
+
+.post-meta {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.post-link h3 {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.post-link p {
+  margin: 0;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.post-arrow {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 18px;
+}
+
+/* Closing */
+.closing {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.closing p {
+  margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.link-row a:hover {
+  color: var(--ink);
+}
+
+/* Footer */
+.site-footer {
+  padding: 40px 32px 64px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Page styles (blog index, posts) */
+.page-main {
+  padding-top: 48px;
+}
+
+.page-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px 56px;
+}
+
+.page-hero .slogan {
+  margin-top: 16px;
+}
+
+.post-body {
+  padding-bottom: 48px;
+}
+
+.post-body h2 {
+  margin: 48px 0 16px;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+.post-note {
+  max-width: var(--max);
+  margin: 0 auto 40px;
+  padding: 20px 32px 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header {
+    padding-top: 32px;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
+
+  .hero h1,
+  .page-title {
+    font-size: 36px;
+  }
+
+  .quick-info,
+  .section-header,
+  .research-item,
+  .post-link {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .quick-info {
+    gap: 28px;
+  }
+
+  .manifesto {
+    margin-left: 32px;
+    margin-right: 32px;
+    padding: 32px 28px 36px;
+  }
+
+  .manifesto p {
+    font-size: 18px;
+  }
+
+  .copy p,
+  .post-body p,
+  .closing p {
+    font-size: 17px;
+  }
+
+  .copy .lead {
+    font-size: 18px;
+  }
+
+  .section {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero h1,
+  .page-title {
+    font-size: 28px;
+  }
+
+  .slogan {
+    font-size: 13px;
+  }
+
+  .site-header,
+  .hero,
+  .quick-info,
+  .copy,
+  .section,
+  .research-list,
+  .post-list,
+  .closing,
+  .post-body,
+  .page-hero,
+  .post-note {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .manifesto {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 28px 20px 32px;
+  }
+
+  .manifesto p {
+    font-size: 17px;
+  }
+
+  .research-item h3,
+  .post-link h3 {
+    font-size: 18px;
+  }
+}
