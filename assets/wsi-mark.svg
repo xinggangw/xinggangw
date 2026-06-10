@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 196" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 360" role="img" aria-labelledby="title desc">
   <title id="title">WSI Labs logo mark</title>
-  <desc id="desc">A WSI Labs mark with a world window, black W path, black S reasoning curve, and blue intelligence axis.</desc>
-  <rect x="0" y="0" width="184" height="196" fill="#ffffff" stroke="#050505" stroke-width="11"/>
-  <path d="M24 114l33 54 35-54 35 54 33-54" fill="none" stroke="#050505" stroke-width="17" stroke-linecap="square" stroke-linejoin="miter"/>
-  <rect x="86" y="26" width="14" height="142" fill="#0077ff"/>
-  <path d="M135 42C111 30 75 30 64 54c-15 34 85 31 69 68-11 25-51 27-82 9" fill="none" stroke="#050505" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <desc id="desc">The WSI Labs H15 Ultra Black mark, built from five equal-width rectangles. The final W stroke is split into a black lower segment and a blue upper segment that reads as a lowercase i.</desc>
+  <polygon points="24.00,48.01 117.47,328.12 186.56,305.06 93.08,24.95" fill="#050505"/>
+  <polygon points="183.40,335.05 288.81,155.78 226.03,118.86 120.62,298.13" fill="#050505"/>
+  <polygon points="226.03,155.78 331.43,335.05 394.21,298.13 288.81,118.86" fill="#050505"/>
+  <polygon points="397.37,328.12 468.40,115.23 399.32,92.18 328.28,305.06" fill="#050505"/>
+  <polygon points="470.48,109.02 488.00,56.51 418.92,33.46 401.40,85.96" fill="#0077ff"/>
 </svg>
