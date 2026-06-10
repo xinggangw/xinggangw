@@ -356,6 +356,39 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
+.post-figure {
+  margin: 0 0 32px;
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.post-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 32px 0 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.paper-links a:hover {
+  color: var(--ink);
+}
+
 .post-note {
   max-width: var(--max);
   margin: 0 auto 40px;

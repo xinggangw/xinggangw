@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A WSI Labs research note on DriveLaW, a CVPR 2026 paper that unifies driving video generation and motion planning in latent space.">
+    <title>DriveLaW: Planning from a Latent Driving World | WSI Labs</title>
+    <link rel="icon" href="../assets/wsi-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="WSI Labs home">
+        <img class="brand-mark" src="../assets/wsi-mark.svg" alt="" width="64" height="64">
+        <span class="brand-text">World Superintelligence Labs</span>
+      </a>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <h1 class="page-title">DriveLaW.</h1>
+        <p class="slogan">planning from a latent driving world / CVPR 2026</p>
+      </section>
+
+      <div class="post-note">
+        <a class="back-link" href="./">Back to research blog</a>
+      </div>
+
+      <article class="post-body">
+        <figure class="post-figure">
+          <img src="../assets/drivelaw-framework.png" alt="DriveLaW architecture diagram showing video latents passed from a video diffusion model to an action diffusion model.">
+          <figcaption>DriveLaW chains a video world model and an action model through shared latent representations.</figcaption>
+        </figure>
+
+        <p>
+          Our CVPR 2026 paper <em>DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</em> studies a simple question: if a driving world model learns how scenes evolve, can its internal representation become the state used for planning?
+        </p>
+        <p>
+          Many driving world models still keep prediction and planning apart. A video model may synthesize future scenes, or provide auxiliary supervision, while the planner receives a separate representation for action. DriveLaW instead chains the two. DriveLaW-Video learns a latent driving world from large-scale driving videos, and DriveLaW-Act uses those video latents directly to generate future trajectories.
+        </p>
+
+        <h2>How It Works</h2>
+        <p>
+          DriveLaW-Video uses a spatiotemporal VAE and a Video DiT to model future driving videos in compressed latent space. A targeted noise reinjection step helps preserve structure during fast motion, where vehicles, road markings, and distant objects often become blurred or distorted.
+        </p>
+        <p>
+          DriveLaW-Act is a lightweight diffusion planner. It takes ego state, high-level commands, and cached latent features from the video model, then predicts a smooth trajectory. The training process is progressive: first learn long-horizon motion, then refine high-resolution scene detail, then fine-tune planning on top of the learned video latents.
+        </p>
+
+        <h2>What We Found</h2>
+        <p>
+          On nuScenes video generation, DriveLaW reaches 4.6 FID and 81.3 FVD, improving over prior single-view driving video generators. On NAVSIM Navtest, it reaches 89.1 PDMS without reinforcement-learning post-training or learned scorer post-processing. The representation ablation is especially useful: under the same diffusion planner, video-generator latents improve PDMS by 5.0 over BEV features and by 2.6 over VLM hidden states.
+        </p>
+        <p>
+          The result supports a practical direction for physical AI. Future prediction should not sit beside action as a separate artifact. A world model becomes more useful when the representation it learns for forecasting also carries the structure needed for control.
+        </p>
+
+        <p class="paper-links">
+          <a href="https://arxiv.org/abs/2512.23421">Paper</a>
+          <span>|</span>
+          <a href="https://github.com/xiaomi-research/drivelaw">Code</a>
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      World Superintelligence Labs © 2026
+    </footer>
+  </body>
+</html>
