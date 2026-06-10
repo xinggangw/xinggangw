@@ -1,22 +1,22 @@
-# WSI Labs Website
+# WSI Labs
 
-Static English website for World Superintelligence Labs, designed for GitHub Pages.
+World Superintelligence Labs builds world models toward embodied general superintelligence — AI systems that understand physical causality, reason across continuous time and space, and plan reliable actions in the real world.
 
-Inspired by the minimal, editorial style of [AMI Labs](https://amilabs.xyz).
+**Website**: https://xinggangw.github.io/
 
-## Files
+---
 
-- `index.html` — Homepage with vision, research focus, and blog preview.
-- `styles.css` — Single-file visual system (serif typography, minimal borders, responsive).
-- `assets/wsi-mark.svg` — WSI Labs geometric mark.
-- `blog/index.html` — Research blog index.
-- `blog/*.html` — Individual research notes.
+## Research Focus
 
-## Publish on GitHub Pages
+- **Physical world models** — compact latent representations preserving causal and geometric structure
+- **Map-free intelligent driving** — scene understanding and local physics without brittle HD maps
+- **Embodied robotics** — perception, memory, and action for real environments
+- **High-dimensional planning** — reasoning under constraints with safety guardrails
 
-1. Create a repository such as `wsi-labs.github.io` or any project repository.
-2. Upload the contents of this directory to the repository root.
-3. In GitHub, open **Settings → Pages**.
-4. Choose the branch and root folder, then save.
+## Research Blog
 
-No build step is required.
+Research notes and technical essays at [/blog](https://xinggangw.github.io/blog/).
+
+---
+
+*Build world model with superintelligence step by step.*
