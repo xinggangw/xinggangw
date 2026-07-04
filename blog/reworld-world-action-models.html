@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A WSI Labs research note on ReWorld, an arXiv paper that improves world action models by directly supervising the representations used for video generation and planning.">
+    <link rel="canonical" href="https://wsilabs.xyz/blog/reworld-world-action-models.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="WSI Labs">
+    <meta property="og:title" content="ReWorld: Better Representations for World Action Models | WSI Labs">
+    <meta property="og:description" content="A WSI Labs research note on ReWorld, an arXiv paper that shapes intermediate world and action representations for better driving video generation and planning.">
+    <meta property="og:url" content="https://wsilabs.xyz/blog/reworld-world-action-models.html">
+    <meta property="og:image" content="https://wsilabs.xyz/assets/reworld-framework.png">
+    <meta property="article:published_time" content="2026-06-25">
+    <meta property="article:modified_time" content="2026-07-04">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ReWorld: Better Representations for World Action Models | WSI Labs">
+    <meta name="twitter:description" content="A WSI Labs research note on ReWorld, an arXiv paper on representation learning for world action models.">
+    <title>ReWorld: Better Representations for World Action Models | WSI Labs</title>
+    <link rel="icon" href="../assets/wsi-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "ReWorld: Better Representations for World Action Models",
+        "description": "A WSI Labs research note on ReWorld, an arXiv paper that shapes intermediate world and action representations for better driving video generation and planning.",
+        "url": "https://wsilabs.xyz/blog/reworld-world-action-models.html",
+        "datePublished": "2026-06-25",
+        "dateModified": "2026-07-04",
+        "image": "https://wsilabs.xyz/assets/reworld-framework.png",
+        "author": {
+          "@type": "Organization",
+          "name": "World Superintelligence Labs",
+          "alternateName": "WSI Labs",
+          "url": "https://wsilabs.xyz/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "World Superintelligence Labs",
+          "alternateName": "WSI Labs",
+          "url": "https://wsilabs.xyz/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wsilabs.xyz/assets/wsi-mark.svg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://wsilabs.xyz/blog/reworld-world-action-models.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-shell">
+        <a class="brand" href="../" aria-label="WSI Labs home">
+          <img class="brand-mark" src="../assets/wsi-mark.svg" alt="" width="62" height="44">
+          <span class="brand-copy">
+            <span class="brand-name">WSI Labs</span>
+            <span class="brand-subtitle">World Superintelligence</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="../#vision">vision</a>
+          <a href="../#research">research</a>
+          <a href="./">blog</a>
+          <a href="../#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-shell page-main">
+      <section class="page-hero">
+        <p class="eyebrow">research release</p>
+        <h1 class="page-title">ReWorld</h1>
+        <p class="slogan">better representations for world action models / arXiv 2026</p>
+      </section>
+
+      <div class="post-note">
+        <a class="back-link" href="./">Back to research blog</a>
+      </div>
+
+      <article class="post-body">
+        <figure class="post-figure">
+          <img src="../assets/reworld-framework.png" alt="ReWorld framework diagram showing a video model, an action model, alignment between their representations, and hard-negative trajectory supervision.">
+          <figcaption>ReWorld directly supervises the hidden states that connect video generation, action prediction, and safety-aware trajectory selection.</figcaption>
+        </figure>
+
+        <p>
+          Our arXiv paper <em>ReWorld: Learning Better Representations for World Action Models</em> looks at a practical weakness in current world action models for autonomous driving. Models such as DriveLaW already connect future video generation with trajectory planning, but most of the supervision still lands only at the final outputs: generated video on one side, planned trajectory on the other.
+        </p>
+        <p>
+          That leaves an important part of the model under-specified. The hidden representations inside the Video DiT and Action DiT carry the scene dynamics, the action context, and the information transferred between the two branches. In standard training, these states are not directly asked to become predictive, transferable, or safety-sensitive. ReWorld makes those internal states part of the training target.
+        </p>
+
+        <h2>What ReWorld Changes</h2>
+        <p>
+          In the video branch, ReWorld adds lightweight prediction heads to selected intermediate Video DiT layers. These heads predict the same flow-matching velocity target as the final output layer, so future-scene constraints enter earlier in the network instead of appearing only at the end. At inference time, the model also uses the gap between intermediate and final predictions as a self-guidance signal for cleaner future frames.
+        </p>
+        <p>
+          In the planning branch, ReWorld aligns each action representation with the video representation it attends to. This is a small but important detail: cross-attention lets the planner read from the world model, but reading is not the same as internalizing. The alignment loss encourages the action state to actually absorb the world information that conditioned it.
+        </p>
+        <p>
+          ReWorld then adds a safety-aware signal. For each training scene, unsafe trajectories are mined from an offline candidate pool scored by the NAVSIM PDM simulator. The planner is trained to keep its predicted trajectory away from unsafe candidates that are geometrically close to the expert trajectory. This helps the action representation separate futures that look similar in coordinates but behave differently in closed-loop evaluation.
+        </p>
+
+        <figure class="post-figure">
+          <img src="../assets/reworld-infer.png" alt="ReWorld inference diagram and convergence plot showing intermediate-guided sampling and faster training convergence.">
+          <figcaption>Intermediate supervision also gives a usable inference-time correction and reaches comparable from-scratch quality with roughly half the training steps.</figcaption>
+        </figure>
+
+        <h2>What We Found</h2>
+        <p>
+          On nuScenes video generation, ReWorld lowers fine-tuned FVD from 81.3 to 61.9, a 23.9% relative improvement over the DriveLaW baseline. In a from-scratch comparison at 120k steps, ReWorld also outperforms several representation-learning alternatives, including methods that align to external visual encoders. The paper argues that frozen image or short-clip encoders often capture appearance semantics, but do not reliably preserve the long-horizon temporal dynamics needed for driving video prediction.
+        </p>
+        <p>
+          On NAVSIM Navtest, ReWorld raises PDMS from 89.1 to 90.4 without reinforcement learning post-training or scorer-based post-processing. The gains are not only from smoother imitation. The model improves no-at-fault collision, drivable-area compliance, and time-to-collision scores, which suggests that the representation losses are changing what the planner knows about risky nearby futures.
+        </p>
+
+        <h2>Why It Matters</h2>
+        <p>
+          For physical AI, a world model is useful only if its representation can support action. ReWorld shows that the bottleneck is not only the architecture connecting video and planning. The hidden states themselves need training signals that match the job they are expected to do: predict how the scene evolves, carry that knowledge into the planner, and distinguish safe futures from plausible but bad ones.
+        </p>
+        <p>
+          The result is a small shift in how we build world action models. Instead of treating video generation as a proxy task whose benefits may or may not reach planning, ReWorld turns the model's internal representations into explicit learning targets for driving behavior.
+        </p>
+
+        <p class="paper-links">
+          <a href="https://arxiv.org/abs/2606.27504">Paper</a>
+          <span>|</span>
+          <a href="drivelaw-latent-driving-world.html">DriveLaW note</a>
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell">World Superintelligence Labs © 2026</div>
+    </footer>
+  </body>
+</html>

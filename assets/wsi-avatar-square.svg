@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">WSI Labs square avatar</title>
+  <desc id="desc">A square avatar version of the WSI Labs H15 Ultra Black mark.</desc>
+  <rect width="1024" height="1024" fill="#ffffff"/>
+  <g transform="translate(102.4 224) scale(1.6)">
+    <polygon points="24.00,48.01 117.47,328.12 186.56,305.06 93.08,24.95" fill="#050505"/>
+    <polygon points="183.40,335.05 288.81,155.78 226.03,118.86 120.62,298.13" fill="#050505"/>
+    <polygon points="226.03,155.78 331.43,335.05 394.21,298.13 288.81,118.86" fill="#050505"/>
+    <polygon points="397.37,328.12 468.40,115.23 399.32,92.18 328.28,305.06" fill="#050505"/>
+    <polygon points="470.48,109.02 488.00,56.51 418.92,33.46 401.40,85.96" fill="#0077ff"/>
+  </g>
+</svg>
