@@ -3,17 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WSI Labs, World Superintelligence Labs, builds world models for physical AI, embodied planning, map-free intelligent driving, and robotics.">
+    <meta name="description" content="WSI Labs builds world models for physical AI: systems that understand multimodal world data and generate action-conditioned futures.">
     <link rel="canonical" href="https://wsilabs.xyz/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WSI Labs">
     <meta property="og:title" content="WSI Labs | World Superintelligence Labs">
-    <meta property="og:description" content="World Superintelligence Labs builds world models for physical AI, embodied planning, map-free intelligent driving, and robotics.">
+    <meta property="og:description" content="World Superintelligence Labs builds world models that understand multimodal world data and generate action-conditioned futures.">
     <meta property="og:url" content="https://wsilabs.xyz/">
-    <meta property="og:image" content="https://wsilabs.xyz/assets/wsi-mark.svg">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://wsilabs.xyz/assets/wsi-og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WSI Labs | World Superintelligence Labs">
-    <meta name="twitter:description" content="World Superintelligence Labs builds world models for physical AI and embodied planning.">
+    <meta name="twitter:description" content="World models for physical AI: understand multimodal world data, generate action-conditioned futures.">
+    <meta name="twitter:image" content="https://wsilabs.xyz/assets/wsi-og-image.png">
     <title>WSI Labs | World Superintelligence Labs</title>
     <link rel="icon" href="assets/wsi-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
@@ -45,7 +48,7 @@
             "publisher": {
               "@id": "https://wsilabs.xyz/#organization"
             },
-            "description": "WSI Labs builds world models for physical AI, embodied planning, map-free intelligent driving, and robotics."
+            "description": "WSI Labs builds world models for physical AI: systems that understand multimodal world data and generate action-conditioned futures."
           }
         ]
       }
@@ -75,7 +78,7 @@
         <div class="hero-copy">
           <h1 id="hero-title">World Superintelligence</h1>
           <p class="slogan">build world model with superintelligence step by step</p>
-          <p class="seo-summary">WSI Labs is World Superintelligence Labs, a research lab building world models for physical AI, embodied planning, intelligent driving, and robotics.</p>
+          <p class="seo-summary">World models for physical AI: understanding multimodal world data, generating action-conditioned futures.</p>
         </div>
       </section>
 
@@ -91,15 +94,55 @@
           </div>
           <div>
             <p class="info-label">Focus</p>
-            <p class="info-value">world models · physical AI · embodied planning</p>
+            <p class="info-value">multimodal understanding · action-conditioned generation · physical AI</p>
           </div>
         </div>
       </section>
 
+      <section class="site-shell section" id="blog" aria-labelledby="blog-title">
+        <div class="section-header">
+          <h2 id="blog-title">Recent Work</h2>
+          <p class="section-intro">
+            Research notes from the lab. Each note explains what changed in the model, what was measured, and why it matters for physical AI.
+          </p>
+        </div>
+      </section>
+
+      <div class="site-shell">
+        <div class="post-list">
+          <a class="post-link" href="blog/reworld-world-action-models.html">
+            <span class="post-meta">research note · arXiv 2026 · 2026.06</span>
+            <div>
+              <h3>ReWorld: Better Representations for World Action Models</h3>
+              <p>A short note on directly supervising intermediate world and action representations for better generation quality and safer planning.</p>
+              <div class="post-tags" aria-label="Topics">
+                <span>world action models</span>
+                <span>planning</span>
+                <span>safety</span>
+              </div>
+            </div>
+            <span class="post-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="post-link" href="blog/drivelaw-latent-driving-world.html">
+            <span class="post-meta">research note · CVPR 2026 · 2026.06</span>
+            <div>
+              <h3>DriveLaW: Planning from a Latent Driving World</h3>
+              <p>A short note on connecting driving video generation and trajectory planning through a shared latent world representation.</p>
+              <div class="post-tags" aria-label="Topics">
+                <span>latent world models</span>
+                <span>driving</span>
+                <span>video generation</span>
+              </div>
+            </div>
+            <span class="post-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
       <section class="site-shell manifesto" id="vision" aria-labelledby="manifesto-title">
         <h2 id="manifesto-title">WSI Labs</h2>
         <p>
-          We are building toward World Superintelligence: AI systems that understand physical causality, reason across continuous time and space, and plan reliable actions in the real world.
+          WSI Labs builds toward World Superintelligence: systems that understand multimodal world data, generate the futures implied by possible actions, and use those futures to plan in the physical world.
         </p>
       </section>
 
@@ -112,13 +155,13 @@
             Roads, factories, homes, weather, bodies, machines, and robots do not arrive as clean tokens. They arrive as continuous, noisy, multimodal streams where small actions change what can happen next.
           </p>
           <p>
-            WSI Labs builds world models for that setting. Our systems learn representations of the physical world that preserve causality, geometry, dynamics, memory, and long-horizon intent while leaving behind details that do not matter for action.
+            WSI Labs builds world models for that setting. The model must read multimodal evidence from the world, keep the causal structure that matters, and generate future states or observations conditioned on action.
           </p>
           <p>
-            Our research path joins frontier architecture work with hard deployment problems: intelligent driving without high-definition map dependence, embodied robots that adapt to unfamiliar spaces, and planning systems that connect perception, memory, and control.
+            This is where perception becomes planning. A driver, robot, or embodied agent should not only recognize the scene in front of it; it should evaluate what the scene becomes under a turn, a brake, a reach, or a wait.
           </p>
           <p>
-            World Superintelligence is not a single launch. It is a disciplined sequence of measurable steps: better representation, stronger prediction, safer planning, more capable embodiments, and open scientific exchange.
+            We measure progress in closed-loop behavior: better predictions, safer plans, and representations that make physical knowledge usable for action.
           </p>
         </div>
       </section>
@@ -127,7 +170,7 @@
         <div class="section-header">
           <h2 id="research-title">Research</h2>
           <p class="section-intro">
-            We focus on world models that can be tested in demanding physical systems, not only in text benchmarks.
+            We focus on world models that understand multimodal streams, generate action-conditioned futures, and hold up in demanding physical systems.
           </p>
         </div>
       </section>
@@ -138,7 +181,7 @@
             <div class="research-kicker">01 / representation</div>
             <div>
               <h3>Physical world models</h3>
-              <p>Learning compact latent states that keep the causal and geometric structure needed for prediction, planning, and control.</p>
+              <p>Learning compact latent states that keep the causal and geometric structure needed to generate action-conditioned futures.</p>
             </div>
           </article>
           <article class="research-item">
@@ -165,36 +208,6 @@
         </div>
       </div>
 
-      <section class="site-shell section" id="blog" aria-labelledby="blog-title">
-        <div class="section-header">
-          <h2 id="blog-title">Research Blog</h2>
-          <p class="section-intro">
-            Research notes, technical essays, and deployment reports from the lab.
-          </p>
-        </div>
-      </section>
-
-      <div class="site-shell">
-        <div class="post-list">
-          <a class="post-link" href="blog/reworld-world-action-models.html">
-            <span class="post-meta">arXiv 2026 · 2026.06</span>
-            <div>
-              <h3>ReWorld: Better Representations for World Action Models</h3>
-              <p>A short note on our arXiv paper, where intermediate world and action representations are directly trained for generation quality and safer planning.</p>
-            </div>
-            <span class="post-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="post-link" href="blog/drivelaw-latent-driving-world.html">
-            <span class="post-meta">CVPR 2026 · 2026.06</span>
-            <div>
-              <h3>DriveLaW: Planning from a Latent Driving World</h3>
-              <p>A short note on our CVPR 2026 paper, where video generation and trajectory planning are connected through shared driving latents.</p>
-            </div>
-            <span class="post-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-
       <section class="site-shell closing" id="contact">
         <div>
           <p>
@@ -206,13 +219,18 @@
             <a href="blog/">Blog</a>
             <span>|</span>
             <a href="#research">Research</a>
+            <span>|</span>
+            <a href="media.html">Media</a>
           </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="site-shell">World Superintelligence Labs © 2026</div>
+      <div class="site-shell footer-row">
+        <span>World Superintelligence Labs © 2026</span>
+        <a href="media.html">Media</a>
+      </div>
     </footer>
   </body>
 </html>
