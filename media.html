@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Logo, avatar, and social preview files for WSI Labs, World Superintelligence Labs.">
     <link rel="canonical" href="https://wsilabs.xyz/media.html">
     <meta property="og:type" content="website">
@@ -31,6 +32,7 @@
             <span class="brand-subtitle">World Superintelligence</span>
           </span>
         </a>
+        <input type="checkbox" class="nav-toggle" aria-label="Toggle navigation menu">
         <nav class="nav" aria-label="Primary navigation">
           <a href="./#vision">vision</a>
           <a href="./#research">research</a>
@@ -59,23 +61,31 @@
       <div class="asset-list">
         <a class="asset-item" href="assets/wsi-mark.svg" download>
           <span class="asset-meta">SVG · primary mark</span>
-          <span class="asset-name">WSI Labs logo mark</span>
-          <span class="asset-note">Vector source for web headers, documents, and light-background layouts.</span>
+          <span>
+            <span class="asset-name">WSI Labs logo mark</span>
+            <span class="asset-note">Vector source for web headers, documents, and light-background layouts.</span>
+          </span>
         </a>
         <a class="asset-item" href="assets/wsi-avatar-square.png" download>
           <span class="asset-meta">PNG · square avatar</span>
-          <span class="asset-name">Square avatar</span>
-          <span class="asset-note">Best default for GitHub, X, and platforms that apply their own crop.</span>
+          <span>
+            <span class="asset-name">Square avatar</span>
+            <span class="asset-note">Best default for GitHub, X, and platforms that apply their own crop.</span>
+          </span>
         </a>
         <a class="asset-item" href="assets/wsi-avatar-circle.png" download>
           <span class="asset-meta">PNG · circular avatar</span>
-          <span class="asset-name">Circular avatar</span>
-          <span class="asset-note">Useful for WeChat and contexts where a finished round crop is preferred.</span>
+          <span>
+            <span class="asset-name">Circular avatar</span>
+            <span class="asset-note">Useful for WeChat and contexts where a finished round crop is preferred.</span>
+          </span>
         </a>
         <a class="asset-item" href="assets/wsi-og-image.png" download>
           <span class="asset-meta">PNG · 1200 x 630</span>
-          <span class="asset-name">Social preview image</span>
-          <span class="asset-note">Used for link previews in social feeds, chat apps, and search snippets.</span>
+          <span>
+            <span class="asset-name">Social preview image</span>
+            <span class="asset-note">Used for link previews in social feeds, chat apps, and search snippets.</span>
+          </span>
         </a>
       </div>
     </main>
@@ -83,7 +93,11 @@
     <footer class="site-footer">
       <div class="site-shell footer-row">
         <span>World Superintelligence Labs © 2026</span>
-        <a href="media.html">Media</a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./">Home</a>
+          <a href="blog/">Blog</a>
+          <a href="https://github.com/wsilabsxyz/wsilabsxyz">GitHub</a>
+        </nav>
       </div>
     </footer>
   </body>

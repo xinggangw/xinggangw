@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="WSI Labs builds toward World Superintelligence, the next step beyond language intelligence: world models that learn from multimodal data, simulate action-conditioned futures, and plan in the physical world.">
     <link rel="canonical" href="https://wsilabs.xyz/">
     <meta property="og:type" content="website">
@@ -64,6 +65,7 @@
             <span class="brand-subtitle">World Superintelligence</span>
           </span>
         </a>
+        <input type="checkbox" class="nav-toggle" aria-label="Toggle navigation menu">
         <nav class="nav" aria-label="Primary navigation">
           <a href="#vision">vision</a>
           <a href="#research">research</a>
@@ -82,69 +84,12 @@
         </div>
       </section>
 
-      <section class="site-shell" aria-label="Lab information">
-        <div class="quick-info">
-          <div>
-            <p class="info-label">Contact</p>
-            <p class="info-value"><a href="mailto:contact@wsilabs.xyz">contact@wsilabs.xyz</a></p>
-          </div>
-          <div>
-            <p class="info-label">Blog</p>
-            <p class="info-value"><a href="blog/">wsi labs updates</a></p>
-          </div>
-          <div>
-            <p class="info-label">Focus</p>
-            <p class="info-value">beyond language intelligence · world simulation · physical planning</p>
-          </div>
-        </div>
-      </section>
-
       <section class="site-shell manifesto" id="vision" aria-labelledby="manifesto-title">
-        <h2 id="manifesto-title">WSI Labs</h2>
+        <h2 id="manifesto-title">vision</h2>
         <p>
           WSI Labs builds toward World Superintelligence, the next step beyond language intelligence. These systems learn from multimodal world data, simulate action-conditioned futures, and turn that simulation into planning in the physical world.
         </p>
       </section>
-
-      <section class="site-shell section" id="blog" aria-labelledby="blog-title">
-        <div class="section-header">
-          <h2 id="blog-title">Recent Work</h2>
-          <p class="section-intro">
-            Research notes from the lab. Each note explains what changed in the model, what was measured, and why it matters for physical AI.
-          </p>
-        </div>
-      </section>
-
-      <div class="site-shell">
-        <div class="post-list">
-          <a class="post-link" href="blog/reworld-world-action-models.html">
-            <span class="post-meta">research note · arXiv 2026 · 2026.06</span>
-            <div>
-              <h3>ReWorld: Better Representations for World Action Models</h3>
-              <p>A short note on directly supervising intermediate world and action representations for better generation quality and safer planning.</p>
-              <div class="post-tags" aria-label="Topics">
-                <span>world action models</span>
-                <span>planning</span>
-                <span>safety</span>
-              </div>
-            </div>
-            <span class="post-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="post-link" href="blog/drivelaw-latent-driving-world.html">
-            <span class="post-meta">research note · CVPR 2026 · 2026.06</span>
-            <div>
-              <h3>DriveLaW: Planning from a Latent Driving World</h3>
-              <p>A short note on connecting driving video generation and trajectory planning through a shared latent world representation.</p>
-              <div class="post-tags" aria-label="Topics">
-                <span>latent world models</span>
-                <span>driving</span>
-                <span>video generation</span>
-              </div>
-            </div>
-            <span class="post-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
 
       <section class="site-shell copy" aria-label="Vision statement">
         <div class="copy-text">
@@ -208,19 +153,56 @@
         </div>
       </div>
 
+      <section class="site-shell section" id="blog" aria-labelledby="blog-title">
+        <div class="section-header">
+          <h2 id="blog-title">Recent Work</h2>
+          <p class="section-intro">
+            Research notes from the lab. Each note explains what changed in the model, what was measured, and why it matters for physical AI.
+          </p>
+        </div>
+      </section>
+
+      <div class="site-shell">
+        <div class="post-list">
+          <a class="post-link" href="blog/reworld-world-action-models.html">
+            <span class="post-meta">research note · arXiv 2026 · 2026.06</span>
+            <div>
+              <h3>ReWorld: Better Representations for World Action Models</h3>
+              <p>A short note on directly supervising intermediate world and action representations for better generation quality and safer planning.</p>
+              <div class="post-tags" aria-label="Topics">
+                <span>world action models</span>
+                <span>planning</span>
+                <span>safety</span>
+              </div>
+            </div>
+            <span class="post-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="post-link" href="blog/drivelaw-latent-driving-world.html">
+            <span class="post-meta">research note · CVPR 2026 · 2026.06</span>
+            <div>
+              <h3>DriveLaW: Planning from a Latent Driving World</h3>
+              <p>A short note on connecting driving video generation and trajectory planning through a shared latent world representation.</p>
+              <div class="post-tags" aria-label="Topics">
+                <span>latent world models</span>
+                <span>driving</span>
+                <span>video generation</span>
+              </div>
+            </div>
+            <span class="post-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
       <section class="site-shell closing" id="contact">
         <div>
           <p>
             If you are building physical AI systems, robotics platforms, autonomous driving stacks, or new model architectures, we would like to talk.
           </p>
           <p class="link-row">
-            <a href="mailto:contact@wsilabs.xyz">Contact</a>
-            <span>|</span>
-            <a href="blog/">Blog</a>
-            <span>|</span>
-            <a href="#research">Research</a>
-            <span>|</span>
-            <a href="media.html">Media</a>
+            <a class="btn btn-primary" href="mailto:contact@wsilabs.xyz">contact@wsilabs.xyz</a>
+            <a class="btn" href="blog/">Blog</a>
+            <a class="btn" href="#research">Research</a>
+            <a class="btn" href="media.html">Media</a>
           </p>
         </div>
       </section>
@@ -229,7 +211,11 @@
     <footer class="site-footer">
       <div class="site-shell footer-row">
         <span>World Superintelligence Labs © 2026</span>
-        <a href="media.html">Media</a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="blog/">Blog</a>
+          <a href="media.html">Media</a>
+          <a href="https://github.com/wsilabsxyz/wsilabsxyz">GitHub</a>
+        </nav>
       </div>
     </footer>
   </body>
