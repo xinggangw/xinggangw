@@ -1,7 +1,8 @@
 /* WSI Labs — design system
    Light editorial style: paper background, serif display, mono labels, blue accent.
    Design intent: premium, elegant, restrained — quiet surfaces, hairline structure,
-   one accent color, motion kept below notice. */
+   one accent color, motion kept below notice.
+   Dark mode: automatic via prefers-color-scheme, same design language, no JS. */
 
 :root {
   --paper: #ffffff;
@@ -15,6 +16,11 @@
   --blue-ink: #0052d6;
   --blue-soft: #eef4ff;
   --blue-line: #cfe2ff;
+  --selection: #d3e5ff;
+  --header-bg: rgba(255, 255, 255, 0.82);
+  --nav-panel-bg: rgba(255, 255, 255, 0.97);
+  --grid-line: rgba(0, 102, 255, 0.04);
+  --hero-glow: rgba(0, 102, 255, 0.06);
   --radius: 12px;
   --shadow: 0 1px 2px rgba(11, 13, 16, 0.05), 0 10px 30px rgba(11, 13, 16, 0.06);
   --max: 1120px;
@@ -48,7 +54,7 @@ body {
 }
 
 ::selection {
-  background: #d3e5ff;
+  background: var(--selection);
 }
 
 a {
@@ -85,7 +91,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--header-bg);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--line);
@@ -264,8 +270,8 @@ img {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(0, 102, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 102, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 78%);
   mask-image: linear-gradient(to bottom, black 0%, transparent 78%);
@@ -279,7 +285,7 @@ img {
   width: min(520px, 100%);
   height: 400px;
   pointer-events: none;
-  background: radial-gradient(closest-side, rgba(0, 102, 255, 0.06), transparent);
+  background: radial-gradient(closest-side, var(--hero-glow), transparent);
 }
 
 .hero-copy {
@@ -471,7 +477,7 @@ img {
   z-index: 1;
   border-color: var(--blue-line);
   border-radius: var(--radius);
-  background: linear-gradient(90deg, var(--blue-soft) 0%, #ffffff 65%);
+  background: linear-gradient(90deg, var(--blue-soft) 0%, var(--paper) 65%);
   color: var(--ink);
 }
 
@@ -655,7 +661,7 @@ img {
   padding: 42px 44px;
   border: 1px solid var(--blue-line);
   border-radius: 16px;
-  background: linear-gradient(180deg, var(--blue-soft) 0%, #ffffff 82%);
+  background: linear-gradient(180deg, var(--blue-soft) 0%, var(--paper) 82%);
 }
 
 .closing::before {
@@ -733,8 +739,8 @@ img {
   inset: -72px 0 0;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(0, 102, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 102, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 92%);
   mask-image: linear-gradient(to bottom, black 0%, transparent 92%);
@@ -905,7 +911,7 @@ img {
     gap: 0;
     padding: 6px 20px 14px;
     border-bottom: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.97);
+    background: var(--nav-panel-bg);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     box-shadow: 0 18px 30px rgba(11, 13, 16, 0.08);
@@ -1038,5 +1044,45 @@ img {
   .footer-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+/* ---------- dark mode ----------
+   Same design language: quiet dark surfaces, hairlines, one blue accent
+   (brightened for contrast). Figures keep a white card so diagrams stay readable. */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0c0e12;
+    --paper-soft: #12151b;
+    --ink: #e9ebef;
+    --ink-soft: #c4c9d2;
+    --muted: #8f96a2;
+    --line: #232830;
+    --line-strong: #30363f;
+    --blue: #4a90ff;
+    --blue-ink: #7fb0ff;
+    --blue-soft: #101c30;
+    --blue-line: #23406e;
+    --selection: #1f3a66;
+    --header-bg: rgba(12, 14, 18, 0.78);
+    --nav-panel-bg: rgba(14, 17, 22, 0.98);
+    --grid-line: rgba(130, 175, 255, 0.055);
+    --hero-glow: rgba(74, 144, 255, 0.1);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  /* logo mark: black strokes become white, the blue accent survives the round trip */
+  .brand-mark {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  /* research diagrams stay on a white card instead of being recolored */
+  .post-figure img {
+    background: #ffffff;
   }
 }
