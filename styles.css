@@ -24,7 +24,7 @@
   --radius: 12px;
   --shadow: 0 1px 2px rgba(11, 13, 16, 0.05), 0 10px 30px rgba(11, 13, 16, 0.06);
   --max: 1120px;
-  --header-h: 68px;
+  --header-h: 60px;
   --serif: Georgia, "Times New Roman", Times, serif;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -121,8 +121,8 @@ img {
 }
 
 .brand-mark {
-  width: 52px;
-  height: 37px;
+  width: 46px;
+  height: 33px;
   flex: 0 0 auto;
   object-fit: contain;
 }
@@ -259,8 +259,8 @@ img {
 
 .hero {
   position: relative;
-  padding-top: 96px;
-  padding-bottom: 72px;
+  padding-top: 64px;
+  padding-bottom: 48px;
 }
 
 /* faint blueprint grid dissolving into the content below */
@@ -298,7 +298,7 @@ img {
   display: block;
   width: min(500px, 100%);
   height: 1px;
-  margin-top: 38px;
+  margin-top: 26px;
   background: linear-gradient(90deg, var(--ink) 0 42px, var(--blue) 42px 88px, var(--line) 88px 100%);
 }
 
@@ -306,7 +306,7 @@ img {
 .page-title {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(44px, 6.4vw, 84px);
+  font-size: clamp(40px, 5.6vw, 72px);
   font-weight: 400;
   line-height: 1.05;
   font-variant: small-caps;
@@ -317,18 +317,18 @@ img {
 
 .slogan {
   display: inline-block;
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
   letter-spacing: 0.02em;
 }
 
 .seo-summary {
   max-width: 700px;
-  margin: 20px 0 0;
+  margin: 14px 0 0;
   color: var(--ink-soft);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.6;
   text-wrap: pretty;
 }
@@ -339,8 +339,8 @@ img {
   display: grid;
   grid-template-columns: 210px 1fr;
   gap: 42px;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   border-bottom: 1px solid var(--line-strong);
 }
 
@@ -371,13 +371,13 @@ img {
   margin: 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(24px, 2.4vw, 32px);
+  font-size: clamp(22px, 2.2vw, 28px);
   line-height: 1.38;
   text-wrap: balance;
 }
 
 .section {
-  padding-top: 64px;
+  padding-top: 48px;
 }
 
 .section-header {
@@ -385,8 +385,8 @@ img {
   grid-template-columns: 210px 1fr;
   gap: 42px;
   align-items: start;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid var(--line-strong);
 }
 
@@ -394,7 +394,7 @@ img {
   max-width: 780px;
   margin: 0;
   color: var(--ink-soft);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
@@ -404,8 +404,8 @@ img {
   display: grid;
   grid-template-columns: 210px 1fr;
   gap: 42px;
-  padding-top: 64px;
-  padding-bottom: 60px;
+  padding-top: 48px;
+  padding-bottom: 44px;
 }
 
 .copy::before {
@@ -459,7 +459,7 @@ img {
   grid-template-columns: 210px 1fr;
   gap: 42px;
   align-items: start;
-  padding: 24px 20px;
+  padding: 18px 20px;
   border: 1px solid transparent;
   border-bottom-color: var(--line);
   counter-increment: rows;
@@ -656,9 +656,9 @@ img {
   display: grid;
   grid-template-columns: 210px 1fr;
   gap: 42px;
-  margin-top: 72px;
-  margin-bottom: 80px;
-  padding: 42px 44px;
+  margin-top: 56px;
+  margin-bottom: 64px;
+  padding: 32px 36px;
   border: 1px solid var(--blue-line);
   border-radius: 16px;
   background: linear-gradient(180deg, var(--blue-soft) 0%, var(--paper) 82%);
@@ -724,19 +724,19 @@ img {
 /* ---------- inner pages ---------- */
 
 .page-main {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .page-hero {
   position: relative;
-  padding-bottom: 48px;
+  padding-bottom: 36px;
 }
 
 .page-hero::before {
   content: "";
   position: absolute;
-  inset: -72px 0 0;
+  inset: -56px 0 0;
   pointer-events: none;
   background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
@@ -751,7 +751,7 @@ img {
 }
 
 .page-hero .page-title {
-  font-size: clamp(40px, 5.4vw, 68px);
+  font-size: clamp(34px, 4.8vw, 56px);
 }
 
 .page-hero .slogan {
@@ -894,7 +894,7 @@ img {
 
 @media (max-width: 820px) {
   .site-header .site-shell {
-    min-height: 62px;
+    min-height: 56px;
   }
 
   .nav-toggle {
@@ -952,8 +952,8 @@ img {
   }
 
   .hero {
-    padding-top: 64px;
-    padding-bottom: 56px;
+    padding-top: 44px;
+    padding-bottom: 36px;
   }
 
   .copy-text {
@@ -992,12 +992,12 @@ img {
   }
 
   .manifesto {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .closing {
-    padding: 30px 24px;
+    padding: 26px 22px;
   }
 }
 
