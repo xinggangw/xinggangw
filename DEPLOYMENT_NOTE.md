@@ -6,8 +6,6 @@ The production site `https://wsilabs.xyz/` is served by GitHub Pages from:
 
 Use this repository as the deployment source for WSI Labs site updates. The local `origin` remote should point to `xinggangw/xinggangw`.
 
-Do not infer the deployment source from the `sameAs` metadata in `index.html`; that field can mention a different GitHub organization and is not the Pages source.
-
 Useful checks:
 
 ```bash
