@@ -1,0 +1,15 @@
+name: Validate static site
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate local links, assets, metadata, and sitemap
+        run: python3 check_site.py
