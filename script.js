@@ -1,6 +1,4 @@
-/* Small progressive-enhancement layer for the mobile navigation. */
-
-document.documentElement.classList.add("js");
+/* Theme controls. The initial theme is applied by theme-init.js. */
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
@@ -15,10 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const updateThemeButtons = () => {
+  const updateTheme = () => {
     const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
     const label = `Switch to ${nextTheme} mode`;
-    const themeColor = root.dataset.theme === "dark" ? "#0c0e12" : "#ffffff";
+    const themeColor = root.dataset.theme === "dark" ? "#0c0d0f" : "#f4f4f0";
+
     document.querySelectorAll(".theme-toggle").forEach((toggle) => {
       toggle.setAttribute("aria-label", label);
       toggle.setAttribute("title", label);
@@ -37,14 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         // The current page can still change theme without persistence.
       }
-      updateThemeButtons();
+      updateTheme();
     });
   });
 
   const handleSystemThemeChange = (event) => {
     if (savedTheme() !== "light" && savedTheme() !== "dark") {
       root.dataset.theme = event.matches ? "dark" : "light";
-      updateThemeButtons();
+      updateTheme();
     }
   };
 
@@ -54,39 +53,5 @@ document.addEventListener("DOMContentLoaded", () => {
     systemTheme.addListener(handleSystemThemeChange);
   }
 
-  updateThemeButtons();
-
-  document.querySelectorAll(".nav-toggle").forEach((toggle) => {
-    const nav = document.getElementById(toggle.getAttribute("aria-controls"));
-    if (!nav) return;
-
-    const setOpen = (open, moveFocus = false) => {
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
-      nav.dataset.open = String(open);
-      if (moveFocus) {
-        const firstLink = nav.querySelector("a");
-        if (firstLink) firstLink.focus();
-      }
-    };
-
-    toggle.addEventListener("click", () => {
-      setOpen(toggle.getAttribute("aria-expanded") !== "true", true);
-    });
-
-    nav.addEventListener("click", (event) => {
-      if (event.target.closest("a")) setOpen(false);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
-        setOpen(false);
-        toggle.focus();
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 820) setOpen(false);
-    });
-  });
+  updateTheme();
 });

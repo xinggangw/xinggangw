@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f4f4f0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0c0d0f" media="(prefers-color-scheme: dark)">
     <meta name="description" content="Logo, avatar, and social preview files for WSI Labs, World Superintelligence Labs.">
     <link rel="canonical" href="https://wsilabs.xyz/media.html">
     <meta property="og:type" content="website">
@@ -26,41 +26,32 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="site-shell">
+      <div class="site-shell header-inner">
         <a class="brand" href="./" aria-label="WSI Labs home">
           <img class="brand-mark" src="assets/wsi-mark.svg" alt="" width="62" height="44">
-          <span class="brand-copy">
-            <span class="brand-name">WSI Labs</span>
-            <span class="brand-subtitle">World Superintelligence</span>
-          </span>
+          <span class="brand-name">WSI Labs<span class="brand-dot">®</span></span>
         </a>
-        <input type="checkbox" class="nav-toggle" aria-label="Toggle navigation menu">
         <nav class="nav" aria-label="Primary navigation">
-          <a href="./#vision">vision</a>
-          <a href="./#research">research</a>
-          <a href="blog/">blog</a>
-          <a href="./#contact">contact</a>
+          <a href="./#vision">Vision</a>
+          <a href="./#research">Research</a>
+          <a href="./#contact">Contact</a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
         </button>
       </div>
     </header>
 
     <main class="site-shell page-main">
-      <section class="page-hero">
-        <p class="eyebrow">brand files</p>
-        <h1 class="page-title">Media</h1>
-        <p class="slogan">logos and avatar files for WSI Labs</p>
-      </section>
-
-      <section class="section" aria-labelledby="media-title">
-        <div class="section-header">
-          <h2 id="media-title">Assets</h2>
-          <p class="section-intro">
-            Use the square PNG for platforms that crop avatars automatically. Use the circular PNG when the platform keeps transparent edges. The SVG mark is best for web and documents.
-          </p>
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="section-label">
+          <span>01</span>
+          <span>Brand files</span>
+        </div>
+        <div>
+          <h1 class="page-title" id="page-title">Media</h1>
+          <p class="page-intro">Logos, avatars, and social preview files for WSI Labs. Download the format that fits your platform.</p>
         </div>
       </section>
 
@@ -71,6 +62,7 @@
             <span class="asset-name">WSI Labs logo mark</span>
             <span class="asset-note">Vector source for web headers, documents, and light-background layouts.</span>
           </span>
+          <span class="asset-arrow" aria-hidden="true">↓</span>
         </a>
         <a class="asset-item" href="assets/wsi-avatar-square.png" download>
           <span class="asset-meta">PNG · square avatar</span>
@@ -78,6 +70,7 @@
             <span class="asset-name">Square avatar</span>
             <span class="asset-note">Best default for GitHub, X, and platforms that apply their own crop.</span>
           </span>
+          <span class="asset-arrow" aria-hidden="true">↓</span>
         </a>
         <a class="asset-item" href="assets/wsi-avatar-circle.png" download>
           <span class="asset-meta">PNG · circular avatar</span>
@@ -85,13 +78,15 @@
             <span class="asset-name">Circular avatar</span>
             <span class="asset-note">Useful for WeChat and contexts where a finished round crop is preferred.</span>
           </span>
+          <span class="asset-arrow" aria-hidden="true">↓</span>
         </a>
         <a class="asset-item" href="assets/wsi-og-image.png" download>
-          <span class="asset-meta">PNG · 1200 x 630</span>
+          <span class="asset-meta">PNG · 1200 × 630</span>
           <span>
             <span class="asset-name">Social preview image</span>
             <span class="asset-note">Used for link previews in social feeds, chat apps, and search snippets.</span>
           </span>
+          <span class="asset-arrow" aria-hidden="true">↓</span>
         </a>
       </div>
     </main>
@@ -99,10 +94,8 @@
     <footer class="site-footer">
       <div class="site-shell footer-row">
         <span>World Superintelligence Labs © 2026</span>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="./">Home</a>
-          <a href="blog/">Blog</a>
-        </nav>
+        <span class="footer-note">Build world models with superintelligence, step by step.</span>
+        <a href="./">Home</a>
       </div>
     </footer>
     <script src="script.js"></script>

@@ -12,5 +12,5 @@ Useful checks:
 git remote -v
 git status -sb
 curl -I https://wsilabs.xyz/
-curl -I https://wsilabs.xyz/blog/reworld-world-action-models.html
+curl -I https://wsilabs.xyz/media.html
 ```
